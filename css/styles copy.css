@@ -1,0 +1,118 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 100px 2fr 2fr;
+    grid-template-areas:
+    'header header header'
+    'nav main main';
+}
+
+header{
+    background-color: #7478BA;
+    padding: 10px 25px;
+    display: flex;
+    grid-area: header;
+}
+
+h1 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.2rem;
+    margin: auto auto auto 0;
+}
+
+h1 span {
+    font-weight: 100;
+}
+
+.notification {
+    display: flex;
+    height: 80%;
+    margin: auto 0;
+    border-right: 1px solid #5D63B9;
+}
+
+.bell-icon {
+    margin: auto 0;
+    width: 1.5em;
+    padding: 0 25px;
+}
+
+.user-image{
+    height: 70%;
+    border-radius: 50%;
+    margin: auto 10px auto 20px;
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: white;
+    margin: auto 0;
+
+}
+
+nav {
+background-color: #4D4D6F;
+grid-area: nav;
+}
+
+.nav-bar {
+        list-style-type: none;
+        margin: 0;
+}
+
+.nav-icon {
+    opacity: 0.5;
+}
+
+.nav-dash {
+    border: 5px solid;
+    border-color: transparent transparent transparent  #7EDA8B ;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+nav ul li img {
+    width: 35px;
+    padding: 20px 30px;
+}
+
+main {
+    grid-area: main;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "dashboard" "search" "traffic" "daily" "users" "stats" "members" "activity" "message" "settings";
+}
+
+.main-header {
+    grid-area: dashboard;
+}
+
+.main-header-search {
+    grid-area: search;
+}
+
+.traffic {
+    grid-area: traffic;
+}
+
+@media (min-width: 768px) {
+    main {
+      grid-template-rows: auto;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "dashboard  search search search search search" "traffic traffic traffic traffic traffic traffic" "daily daily daily users users users" "stats stats stats stats stats stats" "members members members activity activity activity" "message message message settings settings settings";
+    }
+  }
