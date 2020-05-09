@@ -1,3 +1,7 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -20,10 +24,6 @@ main {
 
 .widget-container-full, .widget-container-half {
     width: 95vw;
-}
-
-* {
-    font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -525,11 +525,6 @@ label.timezone-wrap:after {
         height: 100%;  
         pointer-events: none;    
     }
-
-
-
-
-/* Toggle */
 
   .switch {
     position: relative;

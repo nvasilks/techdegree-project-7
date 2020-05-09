@@ -110,7 +110,6 @@ const mobileData = {
         labels: {
         boxWidth: 20,
         padding: 15,
-        //fontStyle: 'bold',
         fontSize: 16,
         reverse: true
         }
