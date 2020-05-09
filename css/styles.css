@@ -246,16 +246,20 @@ h3 {
 margin-top: 1.5rem;
 padding-top: 1rem;
 padding-bottom: 2rem;
-border: 1px solid;
-border-color: #D8D8D8 transparent #D8D8D8 transparent;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .mobile {
 margin-top: 1.5rem;
 padding-top: 1rem;
 padding-bottom: 2rem;
-border: 1px solid;
-border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .social-media {
@@ -268,6 +272,7 @@ border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8
 .social-header {
     margin-top: 1.5rem;
     margin-bottom: 1.2rem;
+    text-align: center;
 }
 
 .social-container {
@@ -309,8 +314,6 @@ border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8
 }
 
 .members {
-border: 1px solid;
-border-color: #D8D8D8 transparent #D8D8D8 transparent;
 margin-top: 3rem;
 padding-right: 1rem;
 padding-bottom: 1rem;
@@ -364,12 +367,11 @@ margin: 0 0 0 0.2rem;
     margin-left: 1rem;
     margin-top: 2rem;
     text-transform: uppercase;
+    text-align: center;
 
 }
 
 .recent-activity {
-    border: 1px solid;
-    border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8;
     margin-top: 3rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -379,7 +381,7 @@ margin: 0 0 0 0.2rem;
         margin-left: 1rem;
         margin-top: 2rem;
         text-transform: uppercase;
-    
+        text-align: center;
     }
 
 .fa-chevron-right {
@@ -474,7 +476,8 @@ form.widget-container {
 }
 
 .message h3, .settings h3 {
-    margin-top: 2rem
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .toggle {
@@ -740,6 +743,36 @@ label.timezone-wrap:after {
     }
     .alert {
         height: 50%;
+    }
+
+    .daily {
+        border: 1px solid;
+        border-color: #D8D8D8 transparent #D8D8D8 transparent;
+    }
+
+    .daily, .mobile {
+    align-items: flex-start;
+    }
+
+    .mobile {
+        border: 1px solid;
+        border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8;
+    }
+
+    .social-header {
+        text-align: left;
+    }
+
+    .members h3, .recent-activity h3, .message h3, .settings h3 {
+        text-align: left;
+    }
+    .members {
+        border: 1px solid;
+        border-color: #D8D8D8 transparent #D8D8D8 transparent;
+    }
+    .recent-activity {
+        border: 1px solid;
+        border-color: #D8D8D8 transparent #D8D8D8 #D8D8D8;
     }
 }
     
