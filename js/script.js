@@ -2,10 +2,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 // Alert
 
-const bell = document.querySelector("body > header > div > svg");
+const bell = document.querySelector(".bell-icon");
 const alertMain = document.querySelector("#alert");
 const closeAlert = document.querySelector("#alert > a");
-const gDot = document.querySelector("body > header > div > div");
+const gDot = document.querySelector(".green-dot");
 
 bell.addEventListener('click', open => {alertMain.style.display = "flex"});
 closeAlert.addEventListener('click', clo => {alertMain.style.display = "none"; gDot.style.display = "none"; });

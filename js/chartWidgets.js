@@ -1,11 +1,18 @@
+// variables
+
+// line graph
+const trafficCanvas = document.querySelector("#traffic-chart");
+// bar graph
+const dailyCanvas = document.querySelector("#daily-chart");
+// doughnut chart
+const mobileCanvas = document.getElementById("mobile-chart");
+
 Chart.defaults.global.defaultFontColor = '#A7A7A7';
 Chart.defaults.global.defaultFontSize = 11;
 Chart.defaults.global.defaultFontFamily = "'Open Sans'";
 
-//Line Graph
 
-const trafficCanvas = document.querySelector("#traffic-chart");
-
+// line graph
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
@@ -19,12 +26,12 @@ let trafficData = {
     pointBorderColor: 'rgb(86, 73, 126)',
     radius: 7,
     pointHoverRadius: 7,
-    lineTension: 0,
+    lineTension: 0
     }]
     };
 
 let trafficOptions = {
-    aspectRatio: 4,
+    aspectRatio: 2.5,
     animation: {
     duration: 0
     },
@@ -48,11 +55,8 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
-//Bar Graph
+// bar graph
 
-const dailyCanvas = document.querySelector("#daily-chart");
-
-// data for daily traffic bar chart
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
@@ -82,9 +86,7 @@ const dailyData = {
         options: dailyOptions
         });
 
-//Doughnut Chart
-
-const mobileCanvas = document.getElementById("mobile-chart");
+// doughnut chart
 
 const mobileData = {
     labels: ["Phones", "Tablets", "Desktop"],
@@ -103,7 +105,6 @@ const mobileData = {
     };
 
     const mobileOptions = {
-        rotation: Math.PI * 1,
         legend: {
         position: 'right',
         labels: {

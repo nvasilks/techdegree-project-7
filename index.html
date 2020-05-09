@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebApp Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="css/toggle-switch.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
@@ -14,6 +13,7 @@
 <body class="grid-container">
 <header>
 <h1>Your<span>App&trade;</span></h1>
+<div class="right-side">
 <div class="notification">
 <svg class="bell-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
        <path d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
@@ -23,6 +23,7 @@
 </div>
 <img class="user-image" src="images/nikolaos.jpeg" alt="Nikolaos Vasilakis">
 <h5>Nikolaos Vasilakis</h5>
+</div>
 </header>
 <nav>
     <ul class="nav-bar">
@@ -51,14 +52,22 @@
 <section class="traffic">
     <div class="traffic-header">
     <h3>TRAFFIC</h3>
-<div class="traffic-nav"></div>
-    <ul class="traffic-time">
+<div class="traffic-nav">
+    <div class="traffic-options">Hourly</div>
+    <div class="traffic-options">Daily</div>
+    <div class="traffic-options">Weekly</div>
+    <div class="traffic-options">Monthly</div>
+</div>
+</div>
+    <!-- <ul class="traffic-time">
         <li>Hourly</li>
         <li>Daily</li>
         <li>Weekly</li>
         <li>Monthly</li>
     </ul>
-    </div>
+    </div> -->
+
+    
     <div class="widget-container-full">
         <!-- element line graph will attach to -->
         <canvas id="traffic-chart"></canvas>
@@ -120,7 +129,7 @@
 </section>
 
 
-    <!-- new members widget --> <section class="members">
+<section class="members">
 <h3>New Members</h3>
 <div class="members-container">
 <img src="images/member-1.jpg"
@@ -156,7 +165,7 @@ class="profile-image" alt="text here">
 
 </section>
 
-<!-- new members widget --> <section class="recent-activity">
+<section class="recent-activity">
     <h3>recent activity</h3>
     <div class="members-container">
     <img src="images/member-1.jpg"
@@ -222,6 +231,7 @@ class="profile-image" alt="text here">
   </div>
   </div>
     <div class="timezone-buttons">
+    <label class="timezone-wrap">
     <select class="form-field" id="timezone">
     <option disabled selected>Select a Timezone</option>
     <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
@@ -265,6 +275,7 @@ class="profile-image" alt="text here">
 	<option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
 	<option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
     </select>
+    </label>
     <div class="settings-button">
     <button class="button-primary" id="save">Save</button>
     <button class="button-disabled" id="cancel">Cancel</button> </div>
